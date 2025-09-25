@@ -1,39 +1,86 @@
-// Função simples para rolar até a seção desejada
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  // Efeito de sombra no cabeçalho ao rolar a página
+  const header = document.getElementById("main-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 
-// Animação de contagem dos resultados
-const counters = document.querySelectorAll('.counter');
-let started = false;
+  // Animação de fade-in das seções ao rolar
+  const sections = document.querySelectorAll(
+    ".content-section, .features-section, .results-section, .team-section"
+  );
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
 
-function animateCounters() {
-  if (started) return;
-  const section = document.getElementById('resultados');
-  const sectionTop = section.getBoundingClientRect().top;
+  const sectionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-  if (sectionTop < window.innerHeight - 100) {
-    started = true;
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const increment = target / 100;
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
 
-      const updateCount = () => {
-        if (count < target) {
-          count += increment;
-          counter.innerText = Math.floor(count);
-          requestAnimationFrame(updateCount);
+  // Animação dos contadores na seção de resultados
+  const counters = document.querySelectorAll(".counter");
+  const resultsSection = document.getElementById("resultados");
+
+  const runCounters = () => {
+    counters.forEach((counter) => {
+      counter.innerText = "0";
+      const target = +counter.getAttribute("data-target");
+      const increment = target / 200;
+
+      const updateCounter = () => {
+        const c = +counter.innerText;
+        if (c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 10);
         } else {
           counter.innerText = target;
         }
       };
-      updateCount();
+      updateCounter();
     });
-  }
-}
+  };
 
-window.addEventListener('scroll', animateCounters);
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          runCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  if (resultsSection) {
+    counterObserver.observe(resultsSection);
+  }
+
+  // Rolagem suave para os links da navegação
+  document.querySelectorAll("nav a, .cta-button").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});

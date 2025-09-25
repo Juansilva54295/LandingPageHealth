@@ -1,127 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Health - Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health - Inovação em Saúde Acadêmica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-  <header>
-    <img src="img/logo.png" alt="Logo do Health"> <!-- Substitua pela sua logo -->
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#objetivos">Objetivos</a>
-      <a href="#metodologia">Metodologia</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#integrantes">Integrantes</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Health - Inovação em Saúde Acadêmica</h1>
-    <p>Modernizando o atendimento em clínicas universitárias com Inteligência Artificial e Processamento de Linguagem Natural.</p>
-    <button onclick="scrollToSection('sobre')">Saiba Mais</button>
-  </section>
-
-  <div class="container" id="sobre">
-    <section>
-      <h2>Sobre o Projeto</h2>
-      <p>
-        O Health é uma solução tecnológica desenvolvida para modernizar e otimizar o atendimento médico em clínicas universitárias. 
-        Através de um aplicativo inteligente, integra recursos de Inteligência Artificial (IA) e Processamento de Linguagem Natural (PLN) 
-        para realizar a triagem automatizada de pacientes, coletando informações como sintomas, histórico médico e queixas principais.
-      </p>
-      <img class="illustration" src="https://source.unsplash.com/800x400/?health,technology" alt="Ilustração sobre saúde e tecnologia">
-    </section>
-
-    <section id="objetivos">
-      <h2>Objetivos</h2>
-      <div class="features">
-        <div class="feature-card">
-          <img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="IA">
-          <h3>Triagem Inteligente</h3>
-          <p>Automatizar a etapa de triagem e identificar casos de urgência no primeiro contato.</p>
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo Health"> <span>Health</span>
+            </a>
+            <nav>
+                <a href="#cenario">O Desafio</a>
+                <a href="#solucao">A Solução</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#impacto">Impacto</a>
+                <a href="#desafios">Futuro</a>
+                <a href="#integrantes">Equipe</a>
+            </nav>
         </div>
-        <div class="feature-card">
-          <img src="https://img.icons8.com/color/96/doctor-male--v2.png" alt="Médico">
-          <h3>Apoio Clínico</h3>
-          <p>Relatórios estruturados que otimizam o tempo de atendimento médico.</p>
-        </div>
-        <div class="feature-card">
-          <img src="https://img.icons8.com/color/96/clock--v1.png" alt="Tempo">
-          <h3>Agilidade</h3>
-          <p>Reduzir filas e diminuir em até 35% o tempo médio de espera dos pacientes.</p>
-        </div>
-      </div>
-    </section>
+    </header>
 
-    <section id="metodologia">
-      <h2>Metodologia</h2>
-      <p>
-        O desenvolvimento seguiu quatro etapas: análise de contexto, modelagem do sistema, implementação tecnológica e testes em ambiente acadêmico. 
-        Foram utilizados algoritmos de IA e tecnologias de PLN, garantindo segurança, confidencialidade e conformidade com normas de proteção de dados.
-      </p>
-      <img class="illustration" src="https://source.unsplash.com/800x400/?medical,data" alt="Ilustração sobre análise médica">
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Inovação para a Saúde Universitária</h1>
+                <p>O Health moderniza o atendimento em clínicas acadêmicas com uma plataforma inteligente, ágil e humanizada, utilizando o poder da Inteligência Artificial.</p>
+                <a href="#cenario" class="cta-button">Descubra Como</a>
+            </div>
+        </section>
 
-    <section id="resultados">
-      <h2>Resultados</h2>
-      <div class="stats">
-        <div class="stat-card">
-          <span class="counter" data-target="35">0</span><span>%</span>
-          <p>Redução no tempo de espera</p>
-        </div>
-        <div class="stat-card">
-          <span class="counter" data-target="90">0</span><span>%</span>
-          <p>Acurácia na classificação de urgências</p>
-        </div>
-        <div class="stat-card">
-          <span class="counter" data-target="80">0</span><span>%</span>
-          <p>Satisfação dos usuários</p>
-        </div>
-      </div>
-    </section>
+        <section id="cenario" class="content-section">
+            <div class="container">
+                <h2>Seção 1: O Cenário Atual</h2>
+                <div class="two-columns">
+                    <div class="column-text">
+                        <h3>O Desafio das Clínicas Universitárias</h3>
+                        <p>A sobrecarga no atendimento é um desafio recorrente em clínicas universitárias, resultado da alta demanda e da limitação de recursos humanos em formação. Essa realidade frequentemente resulta em longas filas, processos burocráticos e pode comprometer a qualidade do atendimento pela falta de ferramentas que auxiliem na organização do fluxo de pacientes.</p>
+                    </div>
+                    <div class="column-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Profissional de saúde sobrecarregado em um ambiente de clínica">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="integrantes">
-      <h2>Integrantes do Projeto</h2>
-      
-        <div class="card">
-          <img src="img/juan.png" alt="Foto integrante 1">
-          <h3>Juan Francisco Portela da Silva </h3>
-          <p>Olá! Sou o Juan, um rapaz curioso e sempre em busca de inovar em meus círculos sociais e aprender coisas novas. Gosto de me manter atualizado sobre diversos assuntos e absorver o máximo de conhecimento possível. Atualmente, estou no 4º período de Engenharia de Software e, paralelamente, venho me aperfeiçoando em desenvolvimento fullstack.</p>
-          <a href="https://www.linkedin.com/in/juan-silva-portela" target="_blank">LinkedIn</a>
+        <section id="solucao" class="content-section">
+            <div class="container">
+                <h2>Seção 2: A Nossa Solução</h2>
+                <div class="two-columns reverse">
+                    <div class="column-image">
+<img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Paciente interagindo com tecnologia de saúde de forma positiva">                    </div>
+                    <div class="column-text">
+                        <h3>Apresentando o Aplicativo Health</h3>
+                       <p>Para resolver esses desafios, apresentamos o Health, um aplicativo inovador com o propósito de promover a modernização do atendimento médico. Nossa plataforma foi desenvolvida para oferecer uma experiência mais ágil, precisa e humanizada, acolhendo o paciente de forma mais eficiente desde o seu primeiro contato com o sistema de saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tecnologia" class="features-section">
+            <div class="container">
+                <h2>Seção 3: Tecnologia e Inovação</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Triagem com Chatbot Inteligente</h3>
+                        <p>A jornada do paciente se inicia com uma triagem automatizada conduzida por um chatbot, que utiliza Processamento de Linguagem Natural (PLN) para compreender as queixas em linguagem natural.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-file-medical-alt"></i>
+                        <h3>Padronização e Análise de Dados</h3>
+                        <p>As informações dos pacientes são coletadas de maneira padronizada e organizada, o que possibilita a identificação imediata de casos urgentes e a geração de relatórios estruturados para apoio clínico.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-route"></i>
+                        <h3>Direcionamento Otimizado</h3>
+                        <p>Com base nos dados da triagem, o sistema direciona o paciente para o atendimento mais apropriado, otimizando os recursos da clínica e garantindo maior agilidade no cuidado prestado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="results-section">
+            <div class="container">
+                <h2>Seção 4: Impacto e Benefícios Esperados</h2>
+                <p class="section-subtitle">O Health foi projetado para gerar valor para pacientes, profissionais e para a própria instituição de ensino.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Pacientes</h3>
+                        <p>Atendimento mais ágil e humanizado, com menos burocracia e maior segurança no cuidado prestado.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Profissionais</h3>
+                        <p>Otimização do tempo com relatórios estruturados, reduzindo erros de interpretação e permitindo mais foco no diagnóstico.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Educação</h3>
+                        <p>Favorece a aprendizagem ativa, baseada em dados reais, e promove a formação de profissionais alinhados às demandas digitais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="desafios" class="content-section">
+             <div class="container">
+                <h2>Seção 5: Desafios e Próximos Passos</h2>
+                <p class="section-subtitle">Reconhecemos os desafios e planejamos a evolução contínua do projeto.</p>
+                <div class="two-columns">
+                      <div class="column-text">
+                        <h3>Considerações de Acessibilidade</h3>
+                        <p>A adoção de tecnologias na saúde enfrenta desafios de inclusão digital. Pacientes com baixa familiaridade com dispositivos móveis podem apresentar limitações, exigindo que a solução seja projetada com foco em design universal e complementada com suporte humano.</p>
+                        <h3>Visão de Futuro</h3>
+                        <p>Nossos próximos passos incluem a realização de testes de usabilidade com pacientes reais, a coleta de feedback para melhorias contínuas e o aprimoramento constante dos algoritmos de IA com novos dados clínicos para aumentar ainda mais sua precisão.</p>
+                    </div>
+                    <div class="column-image">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Pessoas colaborando em um projeto de tecnologia">                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="integrantes" class="team-section">
+            <div class="container">
+                <h2>Seção 6: A Equipe Por Trás do Projeto</h2>
+                <p class="team-subtitle">Alunos do curso de Engenharia de Software</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="img/juan.png" alt="Foto de Juan Francisco">
+                        <h4>Juan Francisco P. da Silva</h4>
+                        <p>Desenvolvedor full-stack, curioso e sempre em busca de inovar e aprender.</p>
+                        <a href="https://www.linkedin.com/in/juan-silva-portela" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/kauan.png" alt="Foto de Kauan Dias">
+                        <h4>Kauan Dias de Assis</h4>
+                        <p>Desenvolvedor júnior apaixonado por tecnologia, com experiência em Java e sistemas TOTVS.</p>
+                        <a href="https://www.linkedin.com/in/kauan-assis-01427b251/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/arthur.png" alt="Foto de Arthur Santos">
+                        <h4>Arthur Santos F. Medeiros</h4>
+                        <p>Estudante dedicado a encontrar soluções criativas para desafios complexos no desenvolvimento de software.</p>
+                          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/fernando.png" alt="Foto de Fernando Figueiredo">
+                        <h4>Fernando F. dos Santos</h4>
+                        <p>Desenvolvedor Java e estudante de Ciência da Computação em busca de criar soluções inovadoras.</p>
+                        <a href="https://www.linkedin.com/in/fernando-figueiredo-576788326/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/cleverson.png" alt="Foto de Fernando Figueiredo">
+                        <h4>Clevesson Mendonça</h4>
+                        <p>Eu sou Clevesson Mendonça, um desenvolvedor front-end apaixonado por criar soluções inovadoras e robustas que elevam a experiência do usuário. </p>
+                        <a href="https://www.linkedin.com/in/clevesson-mendonca/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                  <div class="advisor-section">
+                    <h4>Orientador do Projeto</h4>
+                    <p>Prof. Osmam Brás de Souto </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Health. Todos os direitos reservados. Projeto Integrador - Engenharia de Software.</p>
         </div>
+    </footer>
 
-      <div class="integrantes">
-        <div class="card">
-          <img src="img/kauan.png" alt="Foto integrante 2">
-          <h3>Kauan Dias de Assis</h3>
-          <p>Estudante de Engenharia de Software e desenvolvedor júnior, apaixonado por tecnologia e inovação. Tem experiência em sistemas TOTVS, Java e projetos acadêmicos voltados para saúde e produtividade, sempre buscando aprender e criar soluções práticas.</p>
-          <a href="https://www.linkedin.com/in/kauan-assis-01427b251/" target="_blank">LinkedIn</a>
-        </div>
-
-        <div class="card">
-          <img src="img/arthur.png" alt="Foto integrante 3">
-          <h3>Arthur Santos Fernandes Medeiros</h3>
-          <p>Breve descrição sobre formação ou papel no projeto.</p>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-
-        <div class="card">
-          <img src="img/fernando.png" alt="Foto integrante 4">
-          <h3>Fernando Figueiredo dos Santos</h3>
-          <p>Desenvolvedor Java apaixonado por tecnologia, estudante de Ciência da Computação e sempre em busca de aprender e criar soluções inovadoras.</p>
-          <a href="https://www.linkedin.com/in/fernando-figueiredo-576788326/" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <p>© 2025 Health - Todos os direitos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
